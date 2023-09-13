@@ -1,0 +1,563 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    /* Растягиваем body по высоте html */
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+/* Общие стили для формы и элементов */
+body {
+    font-family: Arial, sans-serif;
+
+    animation: changeBackgroundColor 30s infinite alternate;
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #F4FEFF;
+    }
+    25% {
+        background-color: #FFF4F4;
+    }
+    50% {
+        background-color: #FFFCF4;
+    }
+    75% {
+        background-color: #F4FFF7;
+    }
+    100% {
+        background-color: #FFFCF4;
+    }
+}
+
+.header > .container, .footer > .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для заголовка */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.flex-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.header .flex-wrapper { 
+    margin-top: 20px;
+}
+
+.text-h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #000;
+}
+
+/* Стили для основной части формы */
+.form-wrapper {
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    max-width: 800px;
+}
+
+.form {
+    padding: 20px;
+}
+
+/* Стили для шагов формы */
+.form-step {
+    margin-bottom: 20px;
+}
+
+.form-step__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-step__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-step__counter {
+    font-size: 14px;
+    color: #888888;
+}
+
+/* Стили для ввода текста и текстовой области */
+.input-wrapper {
+    margin-top: 5px;
+}
+
+.input,
+.textarea {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+
+    width: calc(100% - 20px);
+    outline: none;
+    font-size: 16px;
+}
+
+/* Стили для радиокнопок */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.checkbox-wrapper input[type="radio"] {
+    margin-right: 5px;
+}
+
+.checkbox-wrapper .label {
+    font-size: 16px;
+}
+
+/* Стили для выбора варианта */
+.select {
+    position: relative;
+    width: 100%;
+}
+
+.select__header {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    appearance: none;
+
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+
+    background-image: url(../img/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 16px;
+}
+
+.select__content {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.select.opened .select__content {
+    display: block;
+}
+
+.select-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.select-ul__item {
+    padding: 10px;
+    color: #7D7D7D;
+
+    cursor: pointer;
+}
+.select-ul__item.selected {
+    color: #000;
+}
+/* Стили для кнопки отправки формы */
+.button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #ffffff;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Основной контейнер задач */
+.tasks-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Список задач */
+.task-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Элемент задачи */
+.task-list__item {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* При наведении на элемент задачи */
+.task-list__item:hover {
+    transform: translateY(-4px);
+}
+
+/* Превью задачи */
+.task-list__preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* Заголовок задачи */
+.task-list__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Описание задачи */
+.task-list__description {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+}
+
+/* Кнопка "Выбрать" */
+.task-list__btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* При наведении на кнопку "Выбрать" */
+.task-list__btn:hover {
+    background-color: #0056b3;
+}
+
+/* Paggination *Start* */
+
+.paggination {
+    display: flex;
+    justify-content: center;
+}
+.paggination__prev, .paggination__next {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #007bff;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+.paggination__prev > img {
+    transform: rotate(90deg);
+}
+.paggination__next > img {
+    transform: rotate(-90deg);
+}
+.paggination__list {
+    display: inline-flex;
+}
+.paggination__item {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #007bff;
+    border-radius: 6px;
+}
+.paggination__item:first-child {
+    margin-left: 20px;
+}
+.paggination__item:not(:last-child) {
+    margin-right: 10px;
+}
+.paggination__item:last-child {
+    margin-right: 20px;
+}
+.paggination__link {
+    color: #000;
+    text-decoration: none;
+}
+.paggination__next {
+}
+
+/* Paggination *Stop* */
+
+
+/* Overlay *Start* */
+
+.overlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    z-index: 9999;
+}
+.overlay > .container {
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(5px);
+}
+.overlay.opened {
+    display: block;
+}
+.filter-menu {
+    margin-left: auto;
+    max-width: 500px;
+    height: 100%;
+
+    display: none;
+    grid-template-rows: auto 1fr auto;
+
+    background-color: #fff;
+    animation: slideOut 1s ease-in-out;
+}
+.filter-menu.opened {
+    display: grid;
+}
+@keyframes slideOut {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.filter-menu__header {
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-h2 {
+    font-size: 18px;
+    font-weight: bolder;
+}
+.overlay-item__close-btn {
+    position: relative;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+}
+.overlay-item__close-btn > span {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+}
+.overlay-item__close-btn > span:nth-child(1) {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #000;
+    transform: rotate(45deg);
+}
+.overlay-item__close-btn > span:nth-child(2) {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #000;
+    transform: rotate(-45deg);
+}
+.filter-menu__content {
+    height: 100%;
+
+    overflow-y: auto;
+}
+.filter-section {
+    padding: 10px 20px;
+}
+.filter-section:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+
+.filter-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+}
+.filter-section__header > img {
+    transform: rotate(180deg);
+
+    transition: transform 0.2s ease-in-out;
+}
+.filter-section.opened .filter-section__header > img {
+    transform: rotate(0deg);
+}
+.text-h3 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+.filter-section__content {
+    display: none;
+}
+.filter-section.opened .filter-section__content {
+    display: block;
+}
+.filter-section__item {
+}
+
+.filter-section__footer {
+    padding: 20px;
+
+    border-top: 1px solid lightgray;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.button {
+}
+
+
+/* Overlay *Stop* */
+
+/* Медиа-запрос для планшетов и мобильных устройств */
+@media (max-width: 768px) {
+    .task-list__item {
+        max-width: calc(50% - 32px); /* Два элемента в ряд на планшетах */
+    }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 576px) {
+    .task-list__item {
+        max-width: 100%; /* Один элемент в ряд на мобильных устройствах */
+    }
+}
+
+
+/* Основные стили для мобильных устройств (максимальная ширина 767px) */
+@media (max-width: 767px) {
+    /* Здесь определите стили для мобильных устройств */
+
+    .form-step__title {
+        font-size: 1.2rem;
+    }
+
+    .form-step__counter {
+        font-size: 1rem;
+    }
+    
+    .input,
+    .textarea,
+    .checkbox,
+    .select {
+        width: 100%;
+    }
+
+    /* Пример: уменьшение размеров шрифта и ширины полей ввода */
+}
+
+/* Стили для планшетов и маленьких ноутбуков (минимальная ширина 768px) */
+@media (min-width: 768px) {
+    /* Здесь определите стили для планшетов и маленьких ноутбуков */
+
+    .form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Пример: установка ширины формы и центрирование её */
+}
+
+/* Стили для больших ноутбуков и настольных компьютеров (минимальная ширина 1200px) */
+@media (min-width: 1200px) {
+    /* Здесь определите стили для больших ноутбуков и настольных компьютеров */
+
+    .header > .container, .footer > .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Пример: установка максимальной ширины контейнера и центрирование его */
+}

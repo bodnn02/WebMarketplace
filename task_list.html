@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="text-h1">Список заданий</h1>
+            <div class="flex-wrapper">
+                <select name="" id="">
+                    <option value="">Популярности</option>
+                    <option value="">Рейтингу</option>
+                    <option value="">Цене</option>
+                    <option value="">Скидке</option>
+                    <option value="">Обновлению</option>
+                </select>
+                <div class="button" data-link="filters-overlay">Фильтры</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="tasks-wrapper">
+            <ul class="task-list">
+                <li class="task-list__item">
+                    <div class="task-list__preview">
+                        <img src="img/task-preview.png" alt="">
+                    </div>
+                    <div class="task-list__wrapper">
+                        <h4 class="task-list__title">Задание 1</h4>
+                        <div class="task-list__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                        </div>
+                    </div>
+                    <div class="task-list__btn">Выбрать</div>
+                </li>
+                <li class="task-list__item">
+                    <div class="task-list__preview">
+                        <img src="img/task-preview.png" alt="">
+                    </div>
+                    <div class="task-list__wrapper">
+                        <h4 class="task-list__title">Задание 2</h4>
+                        <div class="task-list__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                        </div>
+                    </div>
+                    <div class="task-list__btn">Выбрать</div>
+                </li>
+                <li class="task-list__item">
+                    <div class="task-list__preview">
+                        <img src="img/task-preview.png" alt="">
+                    </div>
+                    <div class="task-list__wrapper">
+                        <h4 class="task-list__title">Задание 3</h4>
+                        <div class="task-list__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                        </div>
+                    </div>
+                    <div class="task-list__btn">Выбрать</div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="paggination">
+                <a class="paggination__prev" href="">
+                    <img src="img/chevron-down.svg" alt="">
+                </a>
+                <ul class="paggination__list">
+                    <li class="paggination__item">
+                        <a href="" class="paggination__link">1</a>
+                    </li>
+                    <li class="paggination__item">
+                        <a href="" class="paggination__link">1</a>
+                    </li>
+                    <li class="paggination__item">
+                        <a href="" class="paggination__link">1</a>
+                    </li>
+                    <li class="paggination__item">
+                        <div class="paggination__link">...</div>
+                    </li>
+                    <li class="paggination__item">
+                        <a href="" class="paggination__link">21</a>
+                    </li>
+                </ul>
+                <a class="paggination__next" href="">
+                    <img src="img/chevron-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay">
+        <div class="container">
+            <div class="filter-menu" data-overlay="filters-overlay">
+                <div class="filter-menu__header">
+                    <h2 class="text-h2">Фильтры</h2>
+                    <div class="overlay-item__close-btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="filter-menu__content">
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-section opened">
+                        <div class="filter-section__header">
+                            <h3 class="text-h3">Категории</h3>
+                            <img src="img/chevron-down.svg" alt="">
+                        </div>
+                        <div class="filter-section__content">
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 1 <span>(1)</span></label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 2</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 3</label>
+                            </div>
+                            <div class="filter-section__item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Категория 4</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section__footer">
+                    <div class="button">Применить</div>
+                    <div class="button">Сбросить</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
